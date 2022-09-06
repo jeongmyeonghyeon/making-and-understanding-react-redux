@@ -180,6 +180,9 @@ _그래서 서버가 바뀌면 클라이언트도 굉장히 많은 영향을 받
 
   이런 패턴들도 어쨌든 간에 ‘DOM API’의 자체 문제점을 개선시켜주지는 않음.
 
+  [microsoft docs](https://docs.microsoft.com/ko-kr/windows/uwp/data-binding/data-binding-and-mvvm)
+  [블로그. 정리잘된.](https://beomy.tistory.com/43)
+
 - React
   그러면 ‘DOM API’의 문제점을 개선시켜주는 모델은 무엇이 있을까?
   지금까지 나온 것 중에 가장 성공적인 건 바로 이제
