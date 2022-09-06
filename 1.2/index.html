@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1타 2피, 3피, 4피</title>
+  </head>
+  <body>
+    <code>
+      <pre>
+DOM API 가 가지고 있는 문제점
+
+<hr />
+
+(1) 라이브 오브젝트(참조를 유지하고 있음)
+
+> const h1 = document.getElementsByTagName('h1') 
+
+> h1.length 
+0
+
+> document.body.appendChild(document.createElement('h1'));
+
+> h1.length
+1
+
+> document.body.appendChild(document.createElement('h1'));
+
+> h1.length
+2
+
+<hr />
+
+(2)
+
+> document.body.appendChild(document.createElement('h2'));
+
+> const h2 = document.getElementsByTagName('h2');
+
+> h2.length
+1
+
+> const H1 = document.querySelectorAll('h1');
+
+> H1.length
+2
+
+> h1.length
+2
+
+> document.body.appendChild(document.createElement('h1'));
+
+> h1.length
+3
+
+> H1.length
+2 😳
+
+> h1
+> HTMLCollection
+
+> H1
+> NodeList
+
+<hr />
+어떤 Query API는 NodeList 라고 하는 애를 주고,
+어떤 애는 HTMLCollection 이라는 객체를 주고 얘는 또 라이브 오브젝트고.
+어떤 애는 라이브 오브젝트가 아니여서 참조가 끊기고;;
+→ 굉장히 일관성이 없음. (이런 API 들이 DOM API에 굉장히 많이 있음.)
+  → 그럼 우리는 이런 API 하나하나를 쓸 때마다 엄청나게 많은 신경을 써야 함. 😣
+  그리고 추가로, 세상의 수많은 (제각각의 표준을 가진) 브라우저들... (크로스 브라우징)
+        </pre>
+    </code>
+  </body>
+</html>
