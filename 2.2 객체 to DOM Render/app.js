@@ -1,52 +1,48 @@
-
 function createDOM(node) {
-  if (typeof node === 'string') {
+  if (typeof node === "string") {
     return document.createTextNode(node);
   }
 
   const element = document.createElement(node.tag);
 
   node.children
-    .map(createDOM)
+    .map(createDOM) // 재귀 호출
     .forEach(element.appendChild.bind(element));
 
   return element;
 }
 
 const vdom = {
-  tag: 'p',
+  tag: "p",
   props: {},
   children: [
     {
-      tag: 'h1',
+      tag: "h1",
       props: {},
       children: ["React 만들기"],
     },
     {
-      tag: 'ul',
+      tag: "ul",
       props: {},
       children: [
         {
-          tag: 'li',
+          tag: "li",
           props: {},
-          children: ["첫 번째 아이템"]
+          children: ["첫 번째 아이템"],
         },
         {
-          tag: 'li',
+          tag: "li",
           props: {},
-          children: ["두 번째 아이템"]
+          children: ["두 번째 아이템"],
         },
         {
-          tag: 'li',
+          tag: "li",
           props: {},
-          children: ["세 번째 아이템"]
+          children: ["세 번째 아이템"],
         },
-      ]
-    }
+      ],
+    },
   ],
 };
 
-document
-  .querySelector('#root')
-  .appendChild(createDOM(vdom));  
-
+document.querySelector("#root").appendChild(createDOM(vdom));
