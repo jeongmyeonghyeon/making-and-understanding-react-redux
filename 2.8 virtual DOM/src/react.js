@@ -51,3 +51,21 @@ export function createElement(tag, props, ...children) {
 export function render(vdom, container) {
   container.appendChild(createDOM(vdom));
 }
+
+export const render = (function () {
+  let prevDom = null;
+
+  return function (vdom, container) {
+    if (prevDom === null) {
+      prevDom = vdom;
+    }
+
+    /* diff 로직 */
+    // 직접 해봐도 되고,
+    // Awesome Open Source에서 virtual-dom library 찾아서 해봐도 됨.
+    // (ex. snabbdom, https://github.com/snabbdom/snabbdom)
+    /* // diff 로직 */
+
+    container.appendChild(createDOM(vdom));
+  };
+})();
