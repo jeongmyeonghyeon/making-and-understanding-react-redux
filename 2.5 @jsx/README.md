@@ -25,9 +25,9 @@ render(vdom2, document.querySelector("#root"));
 webpack을 통해 개발 서버를 띄우고 빌드를 하는데,
 이 프로젝트에서 설정해놓은 webpack의 설정에서는 js파일을 babel-loader에게 전달하게끔 되어있음. (babel: ES6 이상의 문법으로 만들어진 코드를 ES5나 특정타겟으로 migration 해주는 transpiler)
 
-이 babel-loader의 preset으로 @babel/preset-react를 사용하고 있는데, react를 설치해서 진행하고 있는것은 아니기 때문에 not defined error...!
+이 babel-loader의 preset으로 @babel/preset-react를 사용하고 있는데, react를 설치해서 진행하고 있는것은 아니기 때문에 React is not defined error...!
 
-**babel의 결과물**
+**babel의 결과물 - react의 createElement 함수를 사용하고 있음.**
 
 ```javascript
 "use strict";
@@ -64,4 +64,4 @@ const vdom2 = /*#__PURE__*/ React.createElement(
 );
 ```
 
-react의 createElement 함수를 사용하고 있음.
+---
