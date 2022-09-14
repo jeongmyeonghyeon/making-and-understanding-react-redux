@@ -1,5 +1,11 @@
 /* @jsx createElement */
-import { createElement, render } from "./react";
+import { createElement, render, Component } from "./react";
+
+class Title extends Component {
+  render() {
+    return <h1>{props.children}</h1>;
+  }
+}
 
 function Title(props) {
   console.log("여기는 Title"); // 함수 컴포넌트가 자바스크립트 함수기 때문에 이렇게 자연스럽게(!) 자바스크립트를 쓸수 있음.
@@ -10,7 +16,7 @@ function Item(props) {
   return <li style={`color: ${props.color}`}>{props.children}</li>;
 }
 
-const vdom = (
+const App = () => (
   <p>
     <Title>React 정말 잘 만들기</Title>
     <ul>
@@ -21,4 +27,4 @@ const vdom = (
   </p>
 );
 
-render(vdom, document.querySelector("#root"));
+render(<App />, document.querySelector("#root"));

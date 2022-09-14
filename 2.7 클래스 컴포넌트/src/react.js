@@ -1,3 +1,9 @@
+export class Component {
+  constructor(props) {
+    this.props = props;
+  }
+}
+
 export function createDOM(node) {
   if (typeof node === "string") {
     return document.createTextNode(node);
