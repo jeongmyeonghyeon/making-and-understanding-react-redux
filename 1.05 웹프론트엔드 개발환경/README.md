@@ -2,6 +2,12 @@
 
 ##### 05. 웹프론트엔드 개발환경
 
+```
+1. 번들러 웹팩
+2. 바벨
+3. VS Code
+```
+
 - webpack bundler (plugin architecture)
   - webpack의 core는 그대로 있고, plugin/loader/middleware로 기능을 제공...
     ※ loader도 일종의 plugin이라 할 수 있지만, webpack의 매커니즘상 작동하는 위치가 달라서 아마 명칭도 다른것.. (babel)

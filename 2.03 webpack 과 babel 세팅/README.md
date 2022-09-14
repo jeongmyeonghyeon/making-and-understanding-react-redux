@@ -2,6 +2,12 @@
 
 ##### 03. webpack 과 babel 세팅
 
+```
+1. npm init
+2. webpack.config
+3. 프로젝트 리팩토링
+```
+
 webpack 처리 순서.
 
 - entry

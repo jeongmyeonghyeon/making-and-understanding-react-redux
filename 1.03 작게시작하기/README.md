@@ -2,6 +2,12 @@
 
 ##### 03. 작게시작하기
 
+```
+1. 어떻게 만들것인가
+2. React의 MVP
+3. 3가지 컨셉
+```
+
 - [최소 기능 제품(Minimum Viable Product, MVP)](https://ko.wikipedia.org/wiki/%EC%B5%9C%EC%86%8C_%EA%B8%B0%EB%8A%A5_%EC%A0%9C%ED%92%88)
 
   - 어떤 식으로 접근할 것인가? 만드는 것을 어떻게 만들 것인가?

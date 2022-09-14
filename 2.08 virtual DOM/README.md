@@ -2,6 +2,13 @@
 
 ##### 08. virtual DOM
 
+```
+1. VDOM의 역할
+2. VDOM의 마케팅 포인트
+3. diff 구조 구현
+4. VDOM 구현체
+```
+
 - VDOM의 역할
 
   DOM 보다 훨씬 더 쉬운 구조물로 UI를 만들고 개발할 수 있게끔 중간에 DOM 처리는 React한테 맡기고 개발자한테는 JSX라고 하는 마치 DOM/html 태그와 비슷한 Component 베이스의 개발 방식을 만들어줄 수 있게 만든 환경. → Virtual DOM
@@ -16,3 +23,4 @@
 
 - diff 구조 구현
 - VDOM 구현체
+  ex. snabbdom [https://github.com/snabbdom/snabbdom](https://github.com/snabbdom/snabbdom)
