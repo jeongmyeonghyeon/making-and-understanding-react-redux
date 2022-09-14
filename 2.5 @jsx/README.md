@@ -20,7 +20,7 @@ const vdom2 = (
 render(vdom2, document.querySelector("#root"));
 ```
 
--> React is not defined (...?)
+-> Uncaught ReferenceError: React is not defined (...?)
 
 webpack을 통해 개발 서버를 띄우고 빌드를 하는데,
 이 프로젝트에서 설정해놓은 webpack의 설정에서는 js파일을 babel-loader에게 전달하게끔 되어있음. (babel: ES6 이상의 문법으로 만들어진 코드를 ES5나 특정타겟으로 migration 해주는 transpiler)
