@@ -1,42 +1,42 @@
-import { createDOM, render } from './react';
+import { render } from "./react";
 
 const vdom = {
-  tag: 'p',
+  tag: "p",
   props: {},
   children: [
     {
-      tag: 'h1',
+      tag: "h1",
       props: {},
       children: ["React 만들기"],
     },
     {
-      tag: 'ul',
+      tag: "ul",
       props: {},
       children: [
         {
-          tag: 'li',
+          tag: "li",
           props: {
             style: "color:red",
           },
-          children: ["첫 번째 아이템"]
+          children: ["첫 번째 아이템"],
         },
         {
-          tag: 'li',
+          tag: "li",
           props: {
             style: "color:blue",
           },
-          children: ["두 번째 아이템"]
+          children: ["두 번째 아이템"],
         },
         {
-          tag: 'li',
+          tag: "li",
           props: {
             style: "color:green",
           },
-          children: ["세 번째 아이템"]
+          children: ["세 번째 아이템"],
         },
-      ]
-    }
+      ],
+    },
   ],
 };
 
-render(vdom, document.querySelector('#root'));
+render(vdom, document.querySelector("#root"));
