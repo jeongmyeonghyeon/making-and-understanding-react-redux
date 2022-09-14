@@ -1,9 +1,13 @@
 /* @jsx createElement */
 import { createElement, render } from "./react";
 
+function Title() {
+  return <h1>React 잘 만들기</h1>;
+}
+
 const vdom = (
   <p>
-    <h1>React 만들기</h1>
+    <Title></Title>
     <ul>
       <li style="color:red">첫 번째 아이템</li>
       <li style="color:green">두 번째 아이템</li>

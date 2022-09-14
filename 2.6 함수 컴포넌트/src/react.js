@@ -16,7 +16,12 @@ export function createDOM(node) {
 
 export function createElement(tag, props, ...children) {
   props = props || {};
-  return { tag, props, children };
+
+  if (typeof tag === "function") {
+    return tag();
+  } else {
+    return { tag, props, children };
+  }
 }
 
 export function render(vdom, container) {
