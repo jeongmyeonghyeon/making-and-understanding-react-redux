@@ -1,21 +1,15 @@
-import { createStore } from "./redux";
+import { createStore } from "./redux.js";
+import { reducer } from "./reducer.js";
+import * as Actions from "./actions.js";
 
-function worker(state = { count: 0 }, action) {
-  // do something
-  // return { ...state, count: state.count + 1 };
-  switch (action.type) {
-    case "increase":
-      return { ...state, count: state.count + 1 };
-    default:
-      return { ...state };
-  }
-}
-
-const store = createStore(worker);
+const store = createStore(reducer);
 
 store.subscribe(function () {
   console.log(store.getState());
 });
 
-store.send({ type: "increase" });
-store.send({ type: "increase" });
+store.dispatch(Actions.increase());
+store.dispatch(Actions.increase());
+store.dispatch(Actions.increase());
+store.dispatch(Actions.decrease());
+store.dispatch(Actions.reset());
