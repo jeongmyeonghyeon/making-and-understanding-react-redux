@@ -2,8 +2,31 @@ import { createStore } from "./redux.js";
 import * as Actions from "./actions.js";
 import reducer from "./reducer.js";
 import { logger } from "./logger.js";
+import { ASYNC_INCREASE_COUNTER } from "./action-type.js";
 
-const store = createStore(reducer, [logger]);
+const asyncRouter = (jobs) => (store) => (next) => (action) => {
+  const matchJob = Object.entries(jobs).find(([type]) => action.type === type);
+
+  console.log("asyncRouter, matchJob => ", matchJob);
+
+  if (matchJob) {
+    matchJob[1](store, action);
+  } else {
+    next(action);
+  }
+
+  // asyncIncrease();
+};
+
+const asyncJobs = {
+  [ASYNC_INCREASE_COUNTER]: function (store, action) {
+    setTimeout(() => {
+      store.dispatch(Actions.increase(20));
+    }, 3000);
+  },
+};
+
+const store = createStore(reducer, [logger, asyncRouter(asyncJobs)]);
 
 const counterDisplay = document.querySelector("#counter");
 const btnIncrease = document.querySelector("#btn-increase");
