@@ -8,3 +8,5 @@
 3. N개의 미들웨어
 4. 비동기 액션
 ```
+
+redux middleware 파이프라인 구현시 Monkey patching
