@@ -2,6 +2,7 @@ import * as Actions from "./action-type.js";
 
 const InitializeState = {
   message: "app store",
+  request: false,
 };
 
 export default function reducer(state = InitializeState, action) {
@@ -31,6 +32,10 @@ export default function reducer(state = InitializeState, action) {
       };
     case Actions.SET_COUNTER:
       return { ...state, counter: action.payload };
+    case Actions.ASYNC_REQUEST:
+      return { ...state, request: true };
+    case Actions.ASYNC_RESPONSE:
+      return { ...state, request: false };
     default:
       return { ...state };
   }
