@@ -22,5 +22,7 @@
   리액트는 이 virtual DOM을 UI를 업데이트 하는 부분에 사용해서 극대화함. ('객체대 객체'를 비교해 'DOM대 DOM; 비교보다 비용을 굉장히 절약.)
 
 - diff 구조 구현
-- VDOM 구현체
+  
   ex. snabbdom [https://github.com/snabbdom/snabbdom](https://github.com/snabbdom/snabbdom)
+
+- VDOM 구현체
