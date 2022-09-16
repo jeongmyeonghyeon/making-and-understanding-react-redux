@@ -35,7 +35,5 @@ export function createStore(reducer, middlewares = []) {
 
   store.dispatch = lastDispatch;
 
-  console.log("store.dispatch =>", store.dispatch);
-
   return store;
 }

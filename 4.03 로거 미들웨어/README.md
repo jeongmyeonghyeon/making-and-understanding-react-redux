@@ -8,4 +8,9 @@
 3. groupCollapsed
 ```
 
-...
+```javascript
+console.groupCollapsed("action logger => ", action.type);
+console.log("current state: ", currentState);
+console.log("action payload:", action.payload);
+console.groupEnd();
+```
