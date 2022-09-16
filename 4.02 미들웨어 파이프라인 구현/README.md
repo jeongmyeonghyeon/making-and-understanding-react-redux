@@ -9,4 +9,4 @@
 4. 비동기 액션
 ```
 
-redux middleware 파이프라인 구현시 Monkey patching
+redux middleware 파이프라인 구현시 사용한 개념 'Monkey patching🐵'
