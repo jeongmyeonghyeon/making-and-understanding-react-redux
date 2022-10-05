@@ -117,7 +117,7 @@ const vdom2 = createElement(
 );
 ```
 작동을 확인하니 `Uncaught TypeError: Cannot convert undefined or null to object`가 난다.<br />
-react의 props는 없으면 null로 작동하게끔 하는데, 위 코드에서 우리는 `{}`(빈객체)를 넣었기 때문에 에러가 발생한다.
+react의 props는 없으면 null로 작동하게끔 하는데, 앞서 만든 createELement 코드에서 우리는 `{}`(빈객체)를 넣었기 때문에 에러가 발생한다.
 
 <br />
 
