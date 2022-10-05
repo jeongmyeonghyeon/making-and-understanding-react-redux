@@ -9,11 +9,11 @@
 4. action 추가
 ```
 
-actionCreator의 '호출 지연' → 'Curry'.
+actionCreator의 '호출 지연' → 'Currying'.
 
 ```js
 export const actionCreator = (type) => (payload) => ({ type, payload });
 ```
 
-> payload가 없을 때는 없이. action 객체를 만들어줄 수 있게 curry를 사용한다. <br />
+> payload가 없을 때는 없이. action 객체를 만들어줄 수 있게 Currying을 사용한다. <br />
   별거 아닌데(!) redux를 어렵게 느끼는 요인 가운데 하나다. 😅
