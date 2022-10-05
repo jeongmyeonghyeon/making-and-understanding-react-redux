@@ -16,7 +16,7 @@ DOM 보다 훨씬 더 쉬운 구조물로 UI를 만들고 개발할 수 있게�
 
 - 직접 만든 react.js에서 Virtual DOM에 해당하는 코드...
   - createElement의 `return { tag, props, children }` 부분...
-  - 이 객체의 특징은 '트리구조' 인것과 와 루트가 하나고 나머지 모두가 그 루트의 자식요소로서 만들어지는 단일 객체라는 것...! → react가 이 단일 객체로 real DOM을 만듬.(createDOM)
+  - 이 객체의 특징은 '트리구조' 인것과 루트가 하나고 나머지 모두가 그 루트의 자식요소로서 만들어지는 '단일 객체'라는 것...! → react가 이 단일 객체로 real DOM을 만듬.(createDOM)
 
 <br />
 
