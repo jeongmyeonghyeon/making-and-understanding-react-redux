@@ -1,6 +1,6 @@
-##### Part 3. Redux 만들기
+### Part 3. Redux 만들기
 
-##### 03. 구독 발행 모델
+## 03. 구독 발행 모델
 
 ```
 1. createStore
